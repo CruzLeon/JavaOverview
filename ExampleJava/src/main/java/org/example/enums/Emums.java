@@ -18,6 +18,13 @@ enum WeekDays{
 public class Emums {
 
     /**
+     * Los enums se comportan como clases anidadas asi que pueden ser parte de miembros de la clase root
+     */
+    enum Flavors {
+        VANILLA, CHOCOLATE, STRAWBERRY
+    }
+
+    /**
      * No se pueden comparar enums con numeros enteros;
      */
 
@@ -41,6 +48,9 @@ public class Emums {
     public static void main(String[] args) {
         Emums subject = new Emums();
         subject.compare2();
+        
+        //Los ordinales empiezan desde 0
+        System.out.println(Flavors.VANILLA.ordinal());
     }
 
 }
