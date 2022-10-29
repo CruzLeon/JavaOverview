@@ -30,11 +30,23 @@ public class EqualsLearn {
      *      Para cualquier comparacion con null,  object.equals(null) --> debe dar falso
      */
 
-
+    @Override
     public boolean equals(Object obj){
         if(!(obj instanceof EqualsLearn)) return false;
+        return false;
+    }
+
+    /**
+     * SobreCarga de equals
+     *
+     * Aunque el metodo este sobre cargado si al utilizar equals se pasa una referencia a EqualsLearn ingresara en esta sobreCarga
+     * yevaluara el reusltado
+     */
+
+    public boolean equals(EqualsLearn obj){
         return true;
     }
+
 
     @Override
     public int hashCode(){
@@ -42,7 +54,13 @@ public class EqualsLearn {
     }
     public static void main(String[] args) {
         EqualsLearn equalsLearn = new EqualsLearn();
+        Object equalsLearn2 = new EqualsLearn();
+        EqualsLearn equalsLearn3 = new EqualsLearn();
+
         System.out.println(equalsLearn.equals(null));
+        System.out.println(equalsLearn.equals(equalsLearn2)); // into  override
+        System.out.println(equalsLearn.equals(equalsLearn3));// into overload
+
     }
 }
 
