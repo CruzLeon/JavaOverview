@@ -3,6 +3,12 @@ package org.example.innerClass.memberInnerClass;
  class InnerInterfacess {
 
     private interface MyPrivateInterface{
+        /**
+         * public static y final redundantes
+         *
+         * El compilador añade automaticamente public y abstract a todos los metodos no staticos y no default
+         */
+        public static final int mivalue=0;
         void doit();
     }
 
